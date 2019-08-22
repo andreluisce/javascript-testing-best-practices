@@ -123,7 +123,7 @@ Most of the advice below are derivatives of this principle.
 describe('Products Service', function() {
   describe('Add new product', function() {
     //2. scenario and 3. expectation
-    it('When no price is specified, then the product status is pending approval', ()=> {
+    it('When no price is specified, then the product status is pending approval', () => {
       const newProduct = new ProductService().add(...);
       expect(newProduct.status).to.equal('pendingApproval');
     });
@@ -228,7 +228,7 @@ test('Should be classified as premium', () => {
   ### :thumbsdown: Anti Pattern Example: The reader must skim through not so short, and imperative code just to get the test story
 
 ```javascript
-test("When asking for an admin, ensure only ordered admins in results" , ()={
+test("When asking for an admin, ensure only ordered admins in results" , () => {
     //assuming we've added here two admins "admin1", "admin2" and "user1"
     const allAdmins = getUsers({adminOnly:true});
 
@@ -258,7 +258,12 @@ test("When asking for an admin, ensure only ordered admins in results" , ()={
 
 
 ```javascript
-it("When asking for an admin, ensure only ordered admins in results" , ()={
+it("When asking for an admin, ensure only ordered admins in results"
+
+
+
+
+> {
     //assuming we've added here two admins
     const allAdmins = getUsers({adminOnly:true});
 
